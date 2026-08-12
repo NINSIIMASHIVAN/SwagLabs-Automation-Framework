@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd">
+
+<suite name="SwagLabsRegressionSuite">
+
+    <listeners>
+        <listener class-name="com.SwagLabs.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Regression Tests">
+
+        <parameter name="browser" value="chrome"/>
+
+        <classes>
+
+            <class name="com.SwagLabs.test.LoginTest"/>
+
+            <class name="com.SwagLabs.test.InventoryTest"/>
+
+            <class name="com.SwagLabs.test.CheckOutTest"/>
+
+            <class name="com.SwagLabs.test.ConfirmationTest"/>
+
+        </classes>
+
+    </test>
+
+</suite>

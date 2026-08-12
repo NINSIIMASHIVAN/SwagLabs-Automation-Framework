@@ -1,0 +1,33 @@
+
+# Compiled output
+
+/target/
+
+*.class
+
+
+
+# Eclipse/IDE files
+
+.classpath
+
+.project
+
+.settings/
+
+
+
+# Test output and reports (regenerated every run)
+
+/test-output/
+
+/src/test/resources/ExtentReports.HTML
+
+
+
+# OS files
+
+.DS_Store
+
+Thumbs.db
+
