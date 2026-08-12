@@ -75,6 +75,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
     </dependencies>
     <build>
     <plugins>
+    
 
         <!-- Execute TestNG suite -->
         <plugin>
@@ -84,10 +85,10 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
             <configuration>
 
-                <!-- Point to your TestNG suite -->
+                <!-- Pointing to TestNG suite -->
                 <suiteXmlFiles>
-                   <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
-                </suiteXmlFiles>
+    <suiteXmlFile>src/test/resources/testing.xml</suiteXmlFile>
+</suiteXmlFiles>
 
                 <!-- Useful for Java 21 -->
                 <argLine>
