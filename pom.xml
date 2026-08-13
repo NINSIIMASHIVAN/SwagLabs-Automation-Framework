@@ -87,7 +87,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
                 <!-- Pointing to TestNG suite -->
                 <suiteXmlFiles>
-    <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
+    <suiteXmlFile>src/test/resources/testing.xml</suiteXmlFile>
 </suiteXmlFiles>
 
                 <!-- Useful for Java 21 -->
