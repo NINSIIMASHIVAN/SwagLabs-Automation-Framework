@@ -14,21 +14,15 @@ public class InventoryTest extends BaseClass {
 
     private LoginPage loginPage;
     private InventoryPage inventoryPage;
-
-    @BeforeClass
+    
+    @BeforeMethod
     public void setupPages() {
         loginPage = new LoginPage(getDriver());
         inventoryPage = new InventoryPage(getDriver());
-
-        loginPage.login( prop.getProperty("username"),prop.getProperty("password"));
-        }
-       
-    @BeforeMethod
-    public void resetToInventoryPage() {
-            getDriver().get(prop.getProperty("url") + "inventory.html");
-        
+        loginPage.login(prop.getProperty("username"), prop.getProperty("password"));
     }
-
+   
+ 
     @Test(priority = 1)
     public void verifyInventoryPageLoadsSuccessfully() {
         Assert.assertTrue(
@@ -176,16 +170,10 @@ public class InventoryTest extends BaseClass {
         
         inventoryPage.addProductToCart(product1);
         inventoryPage.addProductToCart(product2);
-        Assert.assertEquals(
-                inventoryPage.getShoppingCartCount(),
-                2,
-                "Cart should contain 2 products.");
+        Assert.assertEquals(inventoryPage.getShoppingCartCount(),2,"Cart should contain 2 products.");
 
         inventoryPage.removeProductFromCart(product1);
-        Assert.assertEquals(
-                inventoryPage.getShoppingCartCount(),
-                1,
-                "Cart should contain 1 product after removing one.");
+        Assert.assertEquals(inventoryPage.getShoppingCartCount(), 1,"Cart should contain 1 product after removing one.");
         
         System.out.println("✓ One product removed from cart with remaining products intact");
     }
@@ -202,22 +190,13 @@ public class InventoryTest extends BaseClass {
         Assert.assertEquals(inventoryPage.getShoppingCartCount(), 3);
 
         inventoryPage.removeProductFromCart(product1);
-        Assert.assertEquals(
-                inventoryPage.getShoppingCartCount(),
-                2,
-                "Cart should contain 2 products after first removal.");
+        Assert.assertEquals(inventoryPage.getShoppingCartCount(), 2,"Cart should contain 2 products after first removal.");
 
         inventoryPage.removeProductFromCart(product2);
-        Assert.assertEquals(
-                inventoryPage.getShoppingCartCount(),
-                1,
-                "Cart should contain 1 product after second removal.");
+        Assert.assertEquals(inventoryPage.getShoppingCartCount(),1,"Cart should contain 1 product after second removal.");
 
         inventoryPage.removeProductFromCart(product3);
-        Assert.assertEquals(
-                inventoryPage.getShoppingCartCount(),
-                0,
-                "Cart should be empty after removing all products.");
+        Assert.assertEquals(inventoryPage.getShoppingCartCount(), 0,"Cart should be empty after removing all products.");
         
         System.out.println("✓ All products removed from cart successfully");
     }
