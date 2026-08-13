@@ -51,7 +51,7 @@ pipeline {
                 <p>${env.GIT_COMMIT}</p>
                 <p><b>Branch:</b> ${env.GIT_BRANCH}</p>
                 <p><b>Build log is attached.</b></p>
-                <p><b>Extent Report:</b> <a href="${env.BUILD_URL}Extent_20Spark_20Report/">Click here</a></p>
+                <p><b>Extent Reports:</b> <a href="${env.BUILD_URL}Extent_20Spark_20Report/">Click here</a></p>
                 <p>Best regards,</p>
                 <p><b>Automation Team</b></p>
                 </body>
